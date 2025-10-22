@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutosPlus — Automóviles destacados</title>
+  <style>
+    :root{--accent:#0b72ff;--dark:#111827;--muted:#6b7280;--card:#ffffff;}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#f7f8fb 0%, #ffffff 100%); color:var(--dark)}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:#fff;border-bottom:1px solid #eef2f7;position:sticky;top:0;z-index:10}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#00b4ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center;padding:48px 6%;max-width:1200px;margin:0 auto}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:40px 6%;max-width:1200px;margin:0 auto}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06);overflow:hidden;border:1px solid #eef2f7}
+    .card img{width:100%;height:180px;object-fit:cover;display:block}
+    .card .body{padding:14px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .specs{display:flex;gap:12px;margin-top:12px}
+    .chip{background:#f3f4f6;padding:6px 10px;border-radius:999px;font-size:13px}
+    footer{padding:28px 6%;margin-top:36px;color:var(--muted);border-top:1px solid #eef2f7}
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;padding:28px 4%}.grid-2{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">AP</div>
+      <div>
+        <div style="font-weight:700">AutosPlus</div>
+        <div style="font-size:12px;color:var(--muted)">Tu guía de automóviles</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div>
+      <h1>Encuentra el auto perfecto para cada aventura</h1>
+      <p>Explora una selección variada de automóviles — deportivos, SUV, eléctricos y más. Fotos reales, especificaciones claras y fichas fáciles de comparar.</p>
+      <a class="cta" href="#modelos">Ver modelos destacados</a>
+
+      <div style="margin-top:20px;background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04);max-width:520px">
+        <strong>¿Buscas algo en particular?</strong>
+        <p style="margin:8px 0 0;color:var(--muted)">Usa el formulario de contacto más abajo y te ayudamos a encontrarlo.</p>
+      </div>
+    </div>
+
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(11,114,255,0.08)">
+    <img src="css/js/img/carro con bandera.jpeg" alt="lo mejor en Autos deportivo de EL SALVADOR"> 
+    </div>
+  </section>
+
+  <section class="cards" id="modelos">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b3c2f7b1b2f3c4d5e6f7a8b9c0d1e2f" alt="Sedán elegante"/>
+      <div class="body">
+        <h3>BMW Serie 4 F32 </h3>
+        <p>Seducción y confort en un paquete eficiente — perfecto para el día a día y viajes largos.</p>
+        <div class="specs">
+          <div class="chip">Motor: 435i (N55): Un motor de gasolina de 6 cilindros en línea y 3.0 litros</div>
+          <div class="chip">Potencia: 322  hp</div>
+          <div class="chip">Consumo: 7.2 l/100 km</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c6e5f4a3b2a1c8d9e0f6b7c8d9e0a1b" alt="SUV sobre terreno"/>
+      <div class="body">
+        <h3>Lamborghini Huracán</h3>
+        <p>Huracán Tecnica (2022–2024): Se sitúa entre el EVO RWD y el STO, con el motor V10 atmosférico del STO y tracción trasera.
+Motor: V10 de 5.2 litros, 640 caballos de fuerza.
+Rendimiento: Velocidad máxima de 325 km/h, 0 a 100 km/h en 3,2 segundos.
+Aerodinámica: Aumento del 35% en la carga aerodinámica y reducción del 20% en la resistencia en comparación con el EVO.</p>
+        <div class="specs">
+          <div class="chip">Tracción: Trasera</div>
+          <div class="chip">Capacidad: 2  pasajeros</div>
+          <div class="chip">Autonomía:  664 km</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=a1b2c3d4e5f67890123456789abcdef0" alt="Coche eléctrico en la ciudad"/>
+      <div class="body">
+        <h3>Lamborghini Aventador</h3>
+        <p>superdeportivo biplaza con motor central que fue fabricado por Lamborghini de 2011 a 2022, sucediendo al Murciélago. Conocido por su agresivo estilo, motor V12 atmosférico y prestaciones impresionantes, el Aventador fue el modelo insignia de la marca durante más de una década. </p>
+        <div class="specs">
+          <div class="chip">Autonomía: 620 km</div>
+          <div class="chip">0-100 km/h: Entre 2.8 y 2.9 s</div>
+          <div class="chip">Motor:V12 de 6.5 litros de aspiración natural. </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1234567890abcdef1234567890abcdef" alt="Coupé deportivo"/>
+      <div class="body">
+        <h3>Porsche Panamera</h3>
+        <p>es una berlina de lujo de altas prestaciones con capacidad para cuatro pasajeros, fabricado por la marca alemana Porsche desde 2009. Combina la deportividad y el ADN de los deportivos Porsche con la comodidad y practicidad de una berlina de lujo.</p>
+        <div class="specs">
+          <div class="chip">Potencia: 470 hp</div>
+          <div class="chip">Transmisión: 8-speed</div>
+          <div class="chip">Material: Fibra de carbono</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section style="max-width:1200px;margin:36px auto;padding:0 6%">
+    <div class="grid-2">
+      <div>
+        <h2>Galería rápida</h2>
+        <p style="color:var(--muted)">Algunas tomas adicionales de modelos y detalles — usa estas imágenes como referencia para fichas de producto o posts.</p>
+        <div class="gallery" style="margin-top:12px">
+          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=aa111111bb222222cc333333dd444444" alt="Detalle interior"/>
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=cc111111dd222222ee333333ff444444" alt="Rueda y freno"/>
+        </div>
+      </div>
+
+      <aside style="background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04);border:1px solid #eef2f7">
+        <h3>Contacto</h3>
+        <p style="color:var(--muted);font-size:14px">¿Interesado en uno de los modelos? Escribe y te contactamos con una cotización.</p>
+        <form id="contacto" action="#" onsubmit="alert('Gracias — formulario de ejemplo. En producción conecta esto a un servidor.');return false;">
+          <label style="display:block;margin-top:10px;font-size:13px">Nombre</label>
+          <input required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef">
+          <label style="display:block;margin-top:10px;font-size:13px">Email</label>
+          <input type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef">
+          <label style="display:block;margin-top:10px;font-size:13px">Mensaje</label>
+          <textarea required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef" rows="4">Estoy interesado en ...</textarea>
+          <button style="margin-top:12px;background:var(--accent);color:#fff;padding:10px 12px;border-radius:10px;border:none;cursor:pointer">Enviar</button>
+        </form>
+
+        <div style="margin-top:14px;font-size:13px;color:var(--muted)">
+          <div><strong>Tel:</strong> +503 7000 0000</div>
+          <div style="margin-top:6px"><strong>Ubicación:</strong> San Salvador, El Salvador</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:6% 0;gap:12px;flex-wrap:wrap">
+      <div>© <strong>AutosPlus</strong> 2025 — Todos los derechos reservados</div>
+      <div style="color:var(--muted)">Hecho con ♥ para amantes de los autos</div>
+    </div>
+  </footer>
+
+</body>
+</html>
